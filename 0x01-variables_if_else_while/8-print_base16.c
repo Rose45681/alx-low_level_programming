@@ -2,11 +2,11 @@
 
 /**
  * main - prints the numbers in base 16
- * Return: Always 0
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	in num;
+	int num;
 	char la;
 
 	for (num = 0; num < 10; num++)
