@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 /**
  * main - print the alphabets in reverse
  * Return: Always 0 (success)
@@ -12,7 +11,7 @@ int main(void)
 	for (le = 'z'; le >= 'a'; le--)
 		putchr(le);
 
-	putchar('\n');
+	  putchar('\n');
 
 	return (0);
 }
