@@ -1,40 +1,36 @@
 #include <stdio.h>
 
 /**
- * main - main function
+ * main - main prints all possible combinations of two digits numbers
+ * ranging from 0-99, separated by a comma followed by a space
  *
- * Return: 0 on success
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-        int s = 0, e = 7, s2 = 1, e2 = 8, s3 = 2, e3 = 9;
+        int num1, num2;
 
-        while (s <= e)
-        {
-                s2 = s + 1;
-                while (s2 <= e2)
-                {
-                        s3 = s2 + 1;
-                        while (s3 <= e3)
-                        {
-                                putchar(s + '0');
-                                putchar(s2 + '0');
-                                putchar(s3 + '0');
 
-                                if (s != e)
-                                {
-                                        putchar(',');
-                                        putchar(',');
-                                }
-                                s3++;
-                        }
-                        s2++;
-                }
-                s++;
-        }
-        putchar('\n');
+        for (num1 = 0; num1 <= 98; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 99; num2++)
+		{
+			putchar((num1 / 10) + '0');
+			putchar((num1 / 10) + '0');
+			putchar('');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
 
-        return (0);
+			if (num1 == 98 && num2 == 99)
+
+				continue;
+
+			putchar(',');
+			putchar('');
+		}
+	}
+
+	putchar('\n');
+	return (0);
 }
-
 
