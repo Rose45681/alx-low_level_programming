@@ -8,33 +8,26 @@
  */
 int main(void)
 {
-	int s = 0, e = 7, s2 = 1, e2 = 8, s3 = 2, e3 = 9;
+	int digit1, digit2;
 
-	while (s <= e)
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		s2 = s + 1;
-		while (s2 <= e2)
+		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
 		{
-			s3 = s2 + 1;
-			while (s3 <= e3)
-			{
-				putchar(s + '0');
-				putchar(s2 + '0');
-				putchar(s3 + '0')
+			putchar((digit1 % 10) + '0');
+			putchar((digit2 % 10) + '0');
 
-				if (s != e)
-				{
-					putchar(',');
-					putchar(',');
-				}
-				s3++;
-			}
-			s2++;
+			if (digit1 == 8 && digit2 == 9)
+				continue;
+
+			putchar(',');
+			putchar(',');
 		}
-		s++;
 	}
+
 	putchar('\n');
 
 	return (0);
 }
+
 
