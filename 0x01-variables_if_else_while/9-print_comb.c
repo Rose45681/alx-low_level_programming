@@ -11,14 +11,14 @@ int main(void)
 
 	for (num = 0; num <= 9; num++)
 	{
-		write((num % 9) + '0');
-		if (num == 9)
+		putchar((num % 9) + '0');
+		if (num == 10)
 			continue;
-		{
-			write(',');
-			write(',');
-		}
-		write('\n')
-
+		
+		        putchar(',');
+			putchar(',');
+	}
+	
+	putchar('\n');
 	return (0);
 }
