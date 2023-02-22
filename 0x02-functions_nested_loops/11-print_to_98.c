@@ -4,13 +4,16 @@
 
 /**
  * print_to_98 - prints all natural numbers fron n to 98
- * @n: The number to start printing from
+ *
+ * @n The number to start printing from
+ *
  * Return: Always 0
  */
 
 void print_to_98(int n)
 
 {
+
 	if (n <= 98)
 	{
 	for (; n <= 98; n++)
